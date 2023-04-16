@@ -6,5 +6,43 @@
 //else if(eta>65) riempi prezzoscontato
 // else reimpi prezzobase
 //let eta = document.querySelector('.var-1');
-let eta= document.querySelector.value('.var-1');
 const eurokm = 0.21;
+const smin = 0.8;
+const svec = 0.6;
+const inputEta = document.getElementById('etaid');
+const inputkm = document.getElementById('kmid');
+const poutput = document.querySelector('.prezzbase');
+const psoutput = document.querySelector('.prezzoscontato');
+
+const btn = document.getElementById('btnid');
+btn.addEventListener('click',
+function(){
+    const eta = parseInt(inputEta.value);
+    const km = parseFloat(inputkm.value);
+    console.log(inputEta);
+    console.log(inputkm);
+    let price = km * eurokm;
+    console.log(price);
+    poutput.innerHTML = price;
+    if (eta < 18){
+        price = price * smin;
+        psoutput.innerHTML = price;
+    }
+    else if(eta > 65){
+        price = price * svec;
+        psoutput.innerHTML = price;
+    }
+    psoutput.innerHTML = "nessuno sconto";
+
+})
+
+
+
+
+
+
+
+
+
+
+
