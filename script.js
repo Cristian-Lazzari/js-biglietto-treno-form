@@ -32,7 +32,10 @@ function(){
         price = price * svec;
         psoutput.innerHTML = price;
     }
-    psoutput.innerHTML = "nessuno sconto";
+    else{
+
+        psoutput.innerHTML = "nessuno sconto";
+    }
 
 })
 
